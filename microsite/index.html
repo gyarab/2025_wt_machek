@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZBank Switzerland</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <script src="script.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3 mb-0">ZBank</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Home</a>
+                    </li></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="row align-items-start">
+            <div class="col-md-9">
+                <section>
+                    <h2>Švýcarská banka, které můžete věřit.</h2>
+                    <p>Již po staletí máme monopol v bankovém světě.</p>
+                </section>
+
+                <div class="my-4">
+                    <img src="https://t3.ftcdn.net/jpg/08/08/99/46/360_F_808994683_OUZEZt581lOYP0H2zGRXMZKJ5g87jkjx.jpg" alt="Decorative image" class="img-fluid rounded mx-auto d-block" style="width:100%; max-width:100%; height:auto;">
+                </div>
+            </div>
+
+            <aside class="col-md-3">
+                <style>
+                    .sidebar-scroll {
+                        max-height: 60vh;
+                        overflow-y: auto;
+                        scrollbar-width: thin; /* Firefox */
+                        scrollbar-color: rgba(0,0,0,0.12) transparent; /* Firefox: thumb track */
+                    }
+                    /* WebKit browsers */
+                    .sidebar-scroll::-webkit-scrollbar {
+                        width: 8px;
+                    }
+                    .sidebar-scroll::-webkit-scrollbar-track {
+                        background: transparent;
+                    }
+                    .sidebar-scroll::-webkit-scrollbar-thumb {
+                        background-color: rgba(0,0,0,0.12);
+                        border-radius: 4px;
+                    }
+                    .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+                        background-color: rgba(0,0,0,0.18);
+                    }
+                </style>
+
+                <div class="card">
+                    <div class="card-body sidebar-scroll">
+                        <h3 class="h6">Náš tým</h3>
+                        <p class="mb-2">CEO Noah Swissman</p>
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-113975611.jpg" alt="Noah Swissman" class="img-fluid rounded mb-3">
+                        <p class="mb-2">Prezident Jiří Keř</p>
+                        <img src="https://plus.rozhlas.cz/sites/default/files/styles/cro_16x9_tablet/public/images/03735849.jpeg?itok=SNEjbORX" alt="Jiří Keř" class="img-fluid rounded mb-3">
+                        <p class="mb-2">Ředitel Pepa Nováků</p>
+                        <img src="https://images.unsplash.com/photo-1590086782957-93c06ef21604?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2hpdGUlMjBndXl8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000" alt="Pepa Nováků" class="img-fluid rounded">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="bg-light py-3">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-lg w-100 w-md-auto rounded" role="button" aria-label="Get started" style="background-color:#d9f7d9; color:#064; border:1px solid rgba(0,0,0,0.06); max-width:360px;">Get started</a>
+            </div>
+            <div class="text-center mt-3 small text-muted">
+                &copy; 2025 Jan Machek
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
