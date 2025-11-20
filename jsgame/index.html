@@ -57,20 +57,45 @@
             secretNumber = Math.floor(Math.random() * 20) + 1
             attempts = 0
             attemptsEl.textContent = attempts
+            messageEl.textContent = 'Hádej číslo od 1 do 20'
+            document.getElementById('guess').disabled = false
 
             console.log('--- NEW GAME ---')
             console.log('tajne cislo je', secretNumber)
         }
 
         function checkGuess() {
-            attempts++
-            const attemptsEl = document.getElementById('attempts')
-
             const inputEl = document.getElementById('guess')
-            const guess = Number(inputEl.value)
+            const raw = inputEl.value
+            const guess = Number(raw)
 
+            // Console debugging: show the secret number and the user's guess
+            console.log('DEBUG: secretNumber =', secretNumber, '; guess =', guess)
+
+            if (!raw || Number.isNaN(guess)) {
+                messageEl.textContent = 'Zadejte prosím platné číslo.'
+                return
+            }
+
+            if (guess < 1 || guess > 20) {
+                messageEl.textContent = 'Číslo musí být mezi 1 a 20.'
+                return
+            }
+
+            attempts++
             attemptsEl.textContent = attempts
-            // TODO funkce pro kontrolu hadani cisla a vypis vysledku do elementu messageEl
+
+            if (guess === secretNumber) {
+                messageEl.textContent = `Správně! Vyhrál(a) jste po ${attempts} pokusech.`
+                inputEl.disabled = true
+                console.log('DEBUG: guess is correct')
+            } else if (guess < secretNumber) {
+                messageEl.textContent = 'Vaše číslo je příliš malé. Zkuste vyšší.'
+                console.log('DEBUG: guess is too low')
+            } else {
+                messageEl.textContent = 'Vaše číslo je příliš velké. Zkuste nižší.'
+                console.log('DEBUG: guess is too high')
+            }
         }
 
         document.getElementById('guessBtn').addEventListener('click', checkGuess)
