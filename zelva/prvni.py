@@ -1,0 +1,58 @@
+from turtle import goto, forward, left, pensize, right, circle, color, begin_fill, end_fill, fillcolor, pendown, penup, speed
+from time import *
+
+speed(11)
+pensize(5000)
+color("red")
+forward(1)
+left(180)
+forward(1)
+pensize(20)
+
+
+x = 0
+y = 0
+radius = 250
+
+goto(x,y+radius)
+begin_fill()
+fillcolor("white")
+color("white")
+circle(radius)
+end_fill()
+penup()
+color("black")
+goto(0,y)
+pendown()
+
+right(45)
+forward(100)
+right(90)
+forward(100)
+left(180)
+forward(100)
+left(90)
+forward(100)
+forward(100)
+right(90)
+forward(100)
+right(180)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+right(90)
+forward(100)
+left(180)
+forward(100)
+left(90)
+forward(100)
+forward(100)
+right(90)
+forward(100)
+left(180)
+forward(100)
+left(90)
+forward(100)
+sleep(2)

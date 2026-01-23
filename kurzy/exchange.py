@@ -1,7 +1,8 @@
 import httpx
 
-r = httpx.get('URL z ukolu 2')
-print(r.text)
-print(r.status)
-lines = r.text.split('\n')
-print(lines[0])
+res = httpx.get(httpx://www.cnb.cz/cs/financni-trhy/devizovy-trh/kurzy-devizoveho-trhu/kurzy-devizoveho-trhu/denni_kurz.txt)
+
+
+o = httpx.post()
+
+print("server odpovedel:", res.)
